@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Quarterly Earnings Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- RevealJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+
+    <style>
+      .email { font-size: 0.8em; color: #bbb; }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        
+        <!-- Title Slide -->
+        <section>
+          <h1>Quarterly Earnings Report</h1>
+          <h3>Q2 - 2025</h3>
+          <p class="email">23f1001807@ds.study.iitm.ac.in</p>
+          <aside class="notes">
+            Welcome stakeholders, today I’ll walk you through our Q2 performance with key highlights.
+          </aside>
+        </section>
+
+        <!-- Markdown Slide -->
+        <section data-markdown="slides.md" data-separator="^---$" data-separator-vertical="^--$"></section>
+
+        <!-- Animated Fragments -->
+        <section>
+          <h2>Revenue Growth Drivers</h2>
+          <ul>
+            <li class="fragment">Increased digital transactions</li>
+            <li class="fragment">New wealth management services</li>
+            <li class="fragment">Cost optimization initiatives</li>
+          </ul>
+          <aside class="notes">
+            Introduce revenue drivers one by one for emphasis.
+          </aside>
+        </section>
+
+        <!-- Code Sample -->
+        <section>
+          <h2>Data Processing Pipeline</h2>
+          <pre><code class="language-python">
+import pandas as pd
+
+# Load quarterly revenue
+df = pd.read_csv("revenue.csv")
+
+# Calculate YoY growth
+df["YoY_Growth"] = df["Revenue"].pct_change() * 100
+
+print(df.tail())
+          </code></pre>
+          <aside class="notes">
+            Show how internal analytics pipelines compute revenue growth.
+          </aside>
+        </section>
+
+        <!-- Math Formula -->
+        <section>
+          <h2>Net Present Value</h2>
+          <p>\[
+            NPV = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t}
+          \]</p>
+          <aside class="notes">
+            Highlight how NPV is used for long-term financial decision making.
+          </aside>
+        </section>
+        
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/math/math.js"></script>
+
+    <script>
+      Reveal.initialize({
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+      });
+    </script>
+  </body>
+</html>
